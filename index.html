@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liana's Hair &amp; Beauty • Kapsalon &amp; Schoonheidssalon Utrecht</title>
+  <meta name="description" content="Liana's Hair &amp; Beauty — Kapsalon &amp; Schoonheidssalon in Utrecht Wittevrouwen. Knippen, kleuren, gezichtsbehandelingen, wenkbrauwen en wimpers. 4,7 op Treatwell.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #FAF6F1;
+      --cream: #F3ECE3;
+      --ink: #2B2126;
+      --ink-soft: #6E5E66;
+      --accent: #A65E2E;
+      --accent-deep: #7C4520;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--ivory);
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 246, 241, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .logo {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .logo em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+    .nav-links a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .lang-switch {
+      display: flex;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 999px;
+      padding: 3px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang-switch button {
+      border: 0;
+      background: transparent;
+      padding: 5px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: var(--ink-soft);
+      transition: all .2s ease;
+    }
+    .lang-switch button.active {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1FAF5E;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(31,175,94,0.3);
+    }
+    .wa-btn svg { width: 16px; height: 16px; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(145deg, #7C4520 0%, #A65E2E 48%, #5C331A 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 70%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      padding: 80px 0 60px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(42px, 6.8vw, 68px);
+      line-height: 1.05;
+      font-weight: 700;
+      margin: 0 0 18px;
+      letter-spacing: -1.2px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: #F3E2D2;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 46ch;
+      opacity: 0.95;
+      margin: 0 0 28px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.7);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14.5px;
+      opacity: 0.95;
+    }
+    .stars { letter-spacing: 1px; color: #F4D03F; }
+
+    /* USP STRIP */
+    .usp {
+      background: var(--accent-deep);
+      color: #F8EDE3;
+      padding: 18px 0;
+      font-size: 14.5px;
+    }
+    .usp .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 28px;
+      justify-content: center;
+      text-align: center;
+    }
+    .usp b { color: #fff; }
+
+    /* SECTIONS */
+    section { padding: 72px 0; }
+    .section-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 32px;
+      margin: 0 0 8px;
+      letter-spacing: -0.6px;
+    }
+    .section-subtitle {
+      color: var(--ink-soft);
+      margin-bottom: 32px;
+      font-size: 15.5px;
+    }
+
+    /* SIGNATURE */
+    .signature {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+    }
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .sig-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 11px;
+      border-radius: 999px;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+    .sig-price {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--accent);
+      line-height: 1;
+      margin: 8px 0 4px;
+    }
+    .sig-duration { color: var(--ink-soft); font-size: 15px; }
+
+    /* CAROUSEL */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .carousel-slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .carousel-slide img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      background: #EDE4D9;
+    }
+    .slide-tag {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(43,33,38,0.85);
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 13px;
+      border-radius: 999px;
+      letter-spacing: 0.4px;
+    }
+    .carousel-controls {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      z-index: 2;
+    }
+    .carousel-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255,255,255,0.92);
+      color: var(--ink);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .carousel-dots {
+      display: flex;
+      gap: 6px;
+      margin: 0 8px;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .dot.active {
+      background: #fff;
+      width: 22px;
+      border-radius: 999px;
+    }
+
+    /* OWNER */
+    .owner-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .owner-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      background: #EDE4D9;
+    }
+    .owner-text h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 28px;
+      margin: 0 0 18px;
+    }
+    .owner-text p {
+      color: var(--ink-soft);
+      margin-bottom: 18px;
+    }
+    .owner-badge {
+      margin-top: 12px;
+      display: inline-block;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 10px 18px;
+      border-radius: 14px;
+      font-size: 14.5px;
+    }
+
+    /* PRICES */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .tab {
+      padding: 9px 20px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      font-weight: 600;
+      font-size: 14.5px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .tab.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+    .service {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 16px;
+      padding: 13px 18px;
+      border-radius: 12px;
+    }
+    .service-name {
+      font-weight: 500;
+    }
+    .service-duration {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-left: 6px;
+    }
+    .service-price {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+      text-align: right;
+    }
+    .pin-note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* REVIEWS */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .review-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+    }
+    .review-stars { color: #F4D03F; margin-bottom: 10px; letter-spacing: 1px; }
+    .review-text {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .review-author {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+    .reviews-summary {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 21px;
+      font-weight: 600;
+    }
+    .reviews-summary .big { font-family: 'Fraunces', Georgia, serif; font-size: 38px; color: var(--accent); }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    .hours-table td {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .hours-table tr:last-child td { border-bottom: none; }
+    .hours-table .day { font-weight: 600; width: 58px; }
+    .contact-card {
+      background: var(--ink);
+      color: #F3E8DF;
+      border-radius: var(--radius);
+      padding: 32px 30px;
+    }
+    .contact-card h3 { color: #fff; margin: 0 0 16px; font-size: 21px; }
+    .contact-card a {
+      color: #F3E8DF;
+      text-decoration: underline;
+    }
+    .contact-card .wa {
+      background: #1FAF5E;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 12px 0 6px;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: #C9B8B0;
+      font-size: 13px;
+      padding: 32px 0;
+      text-align: center;
+    }
+    footer a { color: inherit; }
+
+    /* FLOATING WA */
+    .wa-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 200;
+      background: #1FAF5E;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 22px rgba(31,175,94,0.45);
+      text-decoration: none;
+    }
+    .wa-float svg { width: 26px; height: 26px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
+      .nav-links { gap: 14px; font-size: 14px; }
+      .hero-content { padding-top: 60px; }
+      .signature-grid, .owner-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .owner-photo { max-width: 340px; margin: 0 auto; }
+      .reviews-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .container { padding: 0 16px; }
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links { order: 3; width: 100%; justify-content: center; padding-top: 8px; gap: 16px; }
+      .hero h1 { font-size: 38px; }
+      .hero p { font-size: 16.5px; }
+      .section-title { font-size: 26px; }
+      .carousel-slide img { height: 300px; }
+      .menu { padding: 4px; }
+    }
+
+    /* Misc */
+    .muted { color: var(--ink-soft); }
+    .accent { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">Liana's <em>Hair</em> &amp; Beauty</a>
+
+      <div class="nav-links">
+        <a href="#resultaten" data-i18n="nav.resultaten">Resultaten</a>
+        <a href="#behandelingen" data-i18n="nav.behandelingen">Behandelingen</a>
+        <a href="#over" data-i18n="nav.over">Over ons</a>
+        <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="lang-switch">
+          <button id="lang-nl" class="active" onclick="switchLang('nl')">NL</button>
+          <button id="lang-en" onclick="switchLang('en')">EN</button>
+        </div>
+
+        <a class="wa-btn" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20een%20afspraak%20maken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">Kapsalon &amp; Schoonheidssalon · Utrecht Wittevrouwen</div>
+      <h1 data-i18n="hero.title">Goed haar begint <em>op de Biltstraat.</em></h1>
+      <p data-i18n="hero.subtitle">Professioneel knippen, kleuren, threaden van wenkbrauwen en complete gezichtsbehandelingen. Voor zowel mannen als vrouwen in het centrum van Utrecht.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20een%20afspraak%20maken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:2px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          <span data-i18n="hero.cta.whatsapp">Maak een afspraak via WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="#behandelingen" data-i18n="hero.cta.services">Bekijk behandelingen</a>
+      </div>
+
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span><strong>4,7</strong> · 1309 reviews op Treatwell</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- USP -->
+  <div class="usp">
+    <div class="container">
+      <span><b data-i18n="usp.reviews">1309 reviews</b> 4,7 op Treatwell</span>
+      <span><b data-i18n="usp.experience">12+ jaar</b> ervaring</span>
+      <span><b>Keune</b> professionele producten</span>
+      <span><b data-i18n="usp.welcome">Heren &amp; dames</b> iedereen welkom</span>
+    </div>
+  </div>
+
+  <!-- SIGNATURE -->
+  <section id="signature" class="container">
+    <div class="signature">
+      <div class="signature-grid">
+        <div>
+          <div class="sig-badge">SIGNATURE</div>
+          <h2 style="margin:0 0 6px; font-family:'Fraunces',Georgia,serif; font-size:28px;">Gezichtsbehandeling complete</h2>
+          <div class="sig-duration">1u15</div>
+          <div class="sig-price">€84,50</div>
+          <p class="muted" style="margin:16px 0 22px; max-width:38ch;">Волледиге гезихтсбеханделинг инклузиевенд венкбраув вервен ен епилерен. Perfecte ontspanning en verzorging.</p>
+
+          <a class="wa-btn" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20de%20complete%20gezichtsbehandeling%20boeken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            <span data-i18n="signature.cta">Боек de signature behandeling</span>
+          </a>
+        </div>
+        <div>
+          <ul style="margin:0; padding-left:20px; color:var(--ink-soft); line-height:1.75;">
+            <li>Complete gezichtsbehandeling</li>
+            <li>Wenkbrauw verven</li>
+            <li>Wenkbrauw epileren / threaden</li>
+            <li>Persoonlijk advies van Shohreh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER CAROUSEL -->
+  <section id="resultaten" class="container">
+    <h2 class="section-title" data-i18n="resultaten.title">Resultaten</h2>
+    <p class="section-subtitle" data-i18n="resultaten.subtitle">Echte transformaties uit onze salon</p>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="track">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prev" aria-label="Vorige">←</button>
+        <div class="carousel-dots" id="dots"></div>
+        <button class="carousel-btn" id="next" aria-label="Volgende">→</button>
+      </div>
+    </div>
+    <p style="font-size:12px; color:#8A7A82; margin-top:10px; text-align:center;">Swipe of gebruik pijlen • Autoplay elke 5 seconden</p>
+  </section>
+
+  <!-- OWNER -->
+  <section id="over" class="container" style="background:var(--cream); border-radius:var(--radius); padding: 60px 40px;">
+    <div class="owner-grid">
+      <div>
+        <img src="owner/owner.jpg" alt="Shohreh — eigenaar van Liana's Hair &amp; Beauty" class="owner-photo" id="owner-photo">
+      </div>
+      <div class="owner-text">
+        <h2 data-i18n="owner.title">Aangenaam, ik ben <em>Shohreh.</em></h2>
+        <p data-i18n="owner.p1">Met meer dan 12 jaar ervaring in kapsels en schoonheidsbehandelingen run ik Liana's Hair &amp; Beauty met veel passie. Ik werk met de professionele Keune-lijn omdat ik alleen het beste voor mijn klanten wil.</p>
+        <p data-i18n="owner.p2">Ik geloof in een persoonlijke aanpak: eerlijk advies, geen onnodige upsells en altijd de beste look die écht bij jou past. Mannen en vrouwen zijn hier allebei van harte welkom. Of het nu gaat om een perfect kapsel, threaden van wenkbrauwen of een ontspannende gezichtsbehandeling — je bent bij mij in goede handen.</p>
+
+        <div class="owner-badge">⭐ 4,8 persoonlijke score op Treatwell · 838 reviews</div>
+
+        <div style="margin-top:22px;">
+          <a class="wa-btn" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20een%20afspraak%20maken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            <span data-i18n="owner.cta">Maak kennis — app me</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section id="behandelingen" class="container">
+    <h2 class="section-title" data-i18n="prices.title">Behandelingen &amp; prijzen</h2>
+    <p class="section-subtitle" data-i18n="prices.subtitle">Alle prijzen zijn indicatief. Vraag gerust naar een persoonlijk advies.</p>
+
+    <div class="tabs" id="price-tabs">
+      <!-- JS populated or static buttons -->
+    </div>
+
+    <div class="menu" id="menu-content">
+      <!-- Populated dynamically from MENUS -->
+    </div>
+
+    <div class="pin-note">
+      <span>💳</span>
+      <span data-i18n="prices.pin">Betalen kan alleen met PIN.</span>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="container">
+    <h2 class="section-title" data-i18n="reviews.title">Wat klanten zeggen</h2>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text" data-i18n="review.1.text">«Geweldige persoonlijke salon met hardwerkende bekwame en vriendelijke kapster. Ze denkt echt mee, is heel vriendelijk, deskundig en niet duur voor die kwaliteit.»</div>
+        <div class="review-author">— Mevrouw M<br><span style="font-size:12px;opacity:0.7;">Treatwell review · geverifieerd</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text" data-i18n="review.2.text">«Zoals altijd helemaal perfect.»</div>
+        <div class="review-author">— Kapper klant<br><span style="font-size:12px;opacity:0.7;">Treatwell review · geverifieerd</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text" data-i18n="review.3.text">«Great service!»</div>
+        <div class="review-author">— Preethi<br><span style="font-size:12px;opacity:0.7;">Treatwell review · geverifieerd</span></div>
+      </div>
+    </div>
+
+    <div class="reviews-summary">
+      <span class="big">4,7</span><br>
+      <span data-i18n="reviews.summary">Gemiddelde beoordeling op Treatwell · 1309 reviews</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <h2 class="section-title" data-i18n="contact.title">Contact &amp; openingstijden</h2>
+
+    <div class="contact-grid">
+      <!-- Hours -->
+      <div>
+        <table class="hours-table">
+          <tr><td class="day" data-i18n="hours.mon">Ma</td><td data-i18n="hours.closed">gesloten</td></tr>
+          <tr><td class="day">Di–Vr</td><td>09:00–18:00</td></tr>
+          <tr><td class="day">Za</td><td>09:00–17:00</td></tr>
+          <tr><td class="day" data-i18n="hours.sun">Zo</td><td data-i18n="hours.closed">gesloten</td></tr>
+        </table>
+        <p style="margin-top:18px; font-size:13px; color:var(--ink-soft);" data-i18n="contact.hoursNote">Openingstijden bevestigd via Treatwell.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="contact-card">
+        <h3 data-i18n="contact.card.title">Afspraak maken?</h3>
+        <div style="margin-bottom:14px;">
+          <strong>Biltstraat 79</strong><br>
+          3572 AJ Utrecht<br>
+          <span style="opacity:0.85;">Wittevrouwen, centrum</span>
+        </div>
+
+        <a class="wa" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20een%20afspraak%20maken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          <span>App 06 19 00 30 52</span>
+        </a>
+
+        <div style="margin-top:16px; font-size:14.5px;">
+          <div data-i18n="contact.phoneLabel">Liever bellen?</div>
+          <a href="tel:+31619003052" style="font-weight:600; color:#F3E8DF; text-decoration:underline;">06 19 00 30 52</a>
+        </div>
+
+        <div style="margin-top:22px; font-size:12.5px; opacity:0.7;">
+          <!-- IG: toevoegen wanneer we handle vinden -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Liana's Hair &amp; Beauty · Kapsalon &amp; Schoonheidssalon Utrecht | Biltstraat 79 · Keune · PIN only
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/31619003052?text=Hallo!%20Ik%20wil%20graag%20een%20afspraak%20maken%20bij%20Liana%27s%20Hair%20%26%20Beauty." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-.181-1.297-.397-.297-.099-.645-.148-.992-.148-.347 0-.645.074-.992.223-1.042.446-1.742 1.541-1.742 3.137 0 1.541 1.592 3.137 1.84 3.36.248.223 3.11 4.746 7.54 6.656.992.446 1.742.695 2.335.893.992.347 1.892.298 2.59.173.842-.149 2.59-.992 2.962-1.983.372-.992.372-1.84.248-1.983-.124-.149-.446-.223-.943-.446zM12 2C6.477 2 2 6.477 2 12c0 1.89.52 3.66 1.43 5.18L2 22l4.95-1.3C8.43 21.64 10.17 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+  </a>
+
+  <script>
+    // ========== DATA ==========
+    const I18N = {
+      nl: {
+        "nav.resultaten": "Resultaten",
+        "nav.behandelingen": "Behandelingen",
+        "nav.over": "Over ons",
+        "nav.reviews": "Reviews",
+        "nav.contact": "Contact",
+        "nav.whatsapp": "WhatsApp",
+        "hero.title": "Goed haar begint <em>op de Biltstraat.</em>",
+        "hero.subtitle": "Professioneel knippen, kleuren, threaden van wenkbrauwen en complete gezichtsbehandelingen. Voor zowel mannen als vrouwen in het centrum van Utrecht.",
+        "hero.cta.whatsapp": "Maak een afspraak via WhatsApp",
+        "hero.cta.services": "Bekijk behandelingen",
+        "usp.reviews": "1309 reviews",
+        "usp.experience": "12+ jaar",
+        "usp.welcome": "Heren & dames",
+        "signature.cta": "Boek de signature behandeling",
+        "resultaten.title": "Resultaten",
+        "resultaten.subtitle": "Echte transformaties uit onze salon",
+        "owner.title": "Aangenaam, ik ben <em>Shohreh.</em>",
+        "owner.p1": "Met meer dan 12 jaar ervaring in kapsels en schoonheidsbehandelingen run ik Liana's Hair & Beauty met veel passie. Ik werk met de professionele Keune-lijn omdat ik alleen het beste voor mijn klanten wil.",
+        "owner.p2": "Ik geloof in een persoonlijke aanpak: eerlijk advies, geen onnodige upsells en altijd de beste look die écht bij jou past. Mannen en vrouwen zijn hier allebei van harte welkom. Of het nu gaat om een perfect kapsel, threaden van wenkbrauwen of een ontspannende gezichtsbehandeling — je bent bij mij in goede handen.",
+        "owner.cta": "Maak kennis — app me",
+        "prices.title": "Behandelingen & prijzen",
+        "prices.subtitle": "Alle prijzen zijn indicatief. Vraag gerust naar een persoonlijk advies.",
+        "prices.pin": "Betalen kan alleen met PIN.",
+        "reviews.title": "Wat klanten zeggen",
+        "reviews.summary": "Gemiddelde beoordeling op Treatwell · 1309 reviews",
+        "review.1.text": "«Geweldige persoonlijke salon met hardwerkende bekwame en vriendelijke kapster. Ze denkt echt mee, is heel vriendelijk, deskundig en niet duur voor die kwaliteit.»",
+        "review.2.text": "«Zoals altijd helemaal perfect.»",
+        "review.3.text": "«Great service!»",
+        "contact.title": "Contact & openingstijden",
+        "contact.card.title": "Afspraak maken?",
+        "contact.phoneLabel": "Liever bellen?",
+        "hours.mon": "Ma",
+        "hours.sun": "Zo",
+        "hours.closed": "gesloten"
+      },
+      en: {
+        "nav.resultaten": "Results",
+        "nav.behandelingen": "Treatments",
+        "nav.over": "About us",
+        "nav.reviews": "Reviews",
+        "nav.contact": "Contact",
+        "nav.whatsapp": "WhatsApp",
+        "hero.title": "Great hair starts <em>on the Biltstraat.</em>",
+        "hero.subtitle": "Professional haircuts, coloring, eyebrow threading and complete facial treatments. For both men and women in the heart of Utrecht.",
+        "hero.cta.whatsapp": "Book via WhatsApp",
+        "hero.cta.services": "See treatments",
+        "usp.reviews": "1309 reviews",
+        "usp.experience": "12+ years",
+        "usp.welcome": "Men & women",
+        "signature.cta": "Book the signature treatment",
+        "resultaten.title": "Results",
+        "resultaten.subtitle": "Real transformations from our salon",
+        "owner.title": "Nice to meet you, I'm <em>Shohreh.</em>",
+        "owner.p1": "With over 12 years of experience in hair and beauty treatments I run Liana's Hair & Beauty with great passion. I work with the professional Keune line because I only want the best for my clients.",
+        "owner.p2": "I believe in a personal approach: honest advice, no unnecessary upsells and always the best look that truly suits you. Both men and women are warmly welcome here. Whether it's a perfect haircut, eyebrow threading or a relaxing facial treatment — you're in good hands with me.",
+        "owner.cta": "Get to know me — message me",
+        "prices.title": "Treatments & prices",
+        "prices.subtitle": "All prices are indicative. Feel free to ask for personal advice.",
+        "prices.pin": "Payment is possible by PIN only.",
+        "reviews.title": "What our clients say",
+        "reviews.summary": "Average rating on Treatwell · 1309 reviews",
+        "review.1.text": "«Wonderful personal salon with a hard-working, skilled and friendly hairdresser. She really thinks along with you, is very friendly, expert and not expensive for the quality.»",
+        "review.2.text": "«As always completely perfect.»",
+        "review.3.text": "«Great service!»",
+        "contact.title": "Contact & opening hours",
+        "contact.card.title": "Ready to book?",
+        "contact.phoneLabel": "Prefer to call?",
+        "hours.mon": "Mon",
+        "hours.sun": "Sun",
+        "hours.closed": "closed"
+      }
+    };
+
+    // MENUS: prices. "vanaf" prices are estimates — operator to confirm
+    const MENUS = {
+      nl: {
+        "Knippen & stylen": [
+          { name: "Vrouwen knippen", duration: "20 min", price: "€29,50" },
+          // vanaf — schatting, operator te bevestigen
+          { name: "Vrouwen knippen en stylen", duration: "", price: "vanaf €35" },
+          { name: "Mannen knippen", duration: "", price: "vanaf €22" },
+          { name: "Kinderen knippen", duration: "", price: "vanaf €17" }
+        ],
+        "Kleuren": [
+          { name: "Kleuren uitgroei", duration: "", price: "vanaf €45" },
+          { name: "Highlights heel hoofd", duration: "", price: "vanaf €75" },
+          { name: "Highlights half hoofd", duration: "", price: "vanaf €55" }
+        ],
+        "Gezicht": [
+          { name: "Gezichtsbehandeling complete + wenkbrauw verven en epileren", duration: "1u15", price: "€84,50", signature: true },
+          { name: "Gezichtsbehandeling basis", duration: "", price: "vanaf €45" }
+        ],
+        "Wimpers & wenkbrauwen": [
+          { name: "Threaden wenkbrauwen", duration: "10 min", price: "€17" },
+          { name: "Verven wenkbrauwen", duration: "15 min", price: "€15" },
+          { name: "Threaden gezicht", duration: "", price: "vanaf €6" },
+          { name: "Wenkbrauwen verven + threaden", duration: "", price: "€28" }
+        ]
+      },
+      en: {
+        "Cutting & styling": [
+          { name: "Women's haircut", duration: "20 min", price: "€29.50" },
+          // from — estimate, to be confirmed by operator
+          { name: "Women's haircut & style", duration: "", price: "from €35" },
+          { name: "Men's haircut", duration: "", price: "from €22" },
+          { name: "Children's haircut", duration: "", price: "from €17" }
+        ],
+        "Color": [
+          { name: "Root touch-up coloring", duration: "", price: "from €45" },
+          { name: "Full head highlights", duration: "", price: "from €75" },
+          { name: "Half head highlights", duration: "", price: "from €55" }
+        ],
+        "Facial": [
+          { name: "Complete facial treatment + eyebrow tinting and threading", duration: "1h15", price: "€84.50", signature: true },
+          { name: "Basic facial treatment", duration: "", price: "from €45" }
+        ],
+        "Lashes & brows": [
+          { name: "Eyebrow threading", duration: "10 min", price: "€17" },
+          { name: "Eyebrow tinting", duration: "15 min", price: "€15" },
+          { name: "Facial threading", duration: "", price: "from €6" },
+          { name: "Eyebrow tinting + threading", duration: "", price: "€28" }
+        ]
+      }
+    };
+
+    const CATEGORIES_NL = ["Knippen & stylen", "Kleuren", "Gezicht", "Wimpers & wenkbrauwen"];
+    const CATEGORIES_EN = ["Cutting & styling", "Color", "Facial", "Lashes & brows"];
+
+    // ========== CAROUSEL ==========
+    const beforeAfterImages = [
+      { src: "before-after/ba-1.jpg", tag: "Highlights" },
+      { src: "before-after/ba-2.jpg", tag: "Knippen" },
+      { src: "before-after/ba-3.jpg", tag: "Wenkbrauwen" },
+      { src: "before-after/ba-4.jpg", tag: "Kleuren" },
+      { src: "before-after/ba-5.jpg", tag: "Styling" }
+    ];
+
+    let currentSlide = 0;
+    let carouselInterval = null;
+    let loadedImages = 0;
+    let failedImages = 0;
+
+    function buildCarousel() {
+      const track = document.getElementById('track');
+      const dotsContainer = document.getElementById('dots');
+      if (!track || !dotsContainer) return;
+
+      track.innerHTML = '';
+      dotsContainer.innerHTML = '';
+
+      beforeAfterImages.forEach((item, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.tag + ' — voor en na bij Liana\'s Hair & Beauty';
+        img.loading = 'lazy';
+
+        img.onload = () => {
+          loadedImages++;
+          checkCarouselVisibility();
+        };
+        img.onerror = () => {
+          failedImages++;
+          // Replace with nice placeholder so carousel isn't completely broken
+          const placeholder = document.createElement('div');
+          placeholder.style.cssText = 'width:100%;height:420px;max-height:58vh;background:linear-gradient(145deg,#EDE4D9,#D9CBB9);display:flex;align-items:center;justify-content:center;color:#6E5E66;font-size:15px;text-align:center;padding:20px;';
+          placeholder.innerHTML = `<div><strong>${item.tag}</strong><br><span style="font-size:12px;opacity:0.7;">Voeg foto toe: ${item.src}</span></div>`;
+          slide.replaceChild(placeholder, img);
+          checkCarouselVisibility();
+        };
+
+        const tag = document.createElement('div');
+        tag.className = 'slide-tag';
+        tag.textContent = item.tag;
+
+        slide.appendChild(img);
+        slide.appendChild(tag);
+        track.appendChild(slide);
+
+        // dots
+        const dot = document.createElement('div');
+        dot.className = 'dot' + (index === 0 ? ' active' : '');
+        dot.onclick = () => goToSlide(index);
+        dotsContainer.appendChild(dot);
+      });
+
+      // initial visibility check (in case all cached or very fast)
+      setTimeout(checkCarouselVisibility, 800);
+
+      // controls
+      document.getElementById('prev').onclick = () => {
+        goToSlide(currentSlide - 1);
+        resetAutoplay();
+      };
+      document.getElementById('next').onclick = () => {
+        goToSlide(currentSlide + 1);
+        resetAutoplay();
+      };
+
+      // keyboard
+      document.addEventListener('keydown', (e) => {
+        if (document.getElementById('resultaten').style.display === 'none') return;
+        if (e.key === 'ArrowLeft') { goToSlide(currentSlide - 1); resetAutoplay(); }
+        if (e.key === 'ArrowRight') { goToSlide(currentSlide + 1); resetAutoplay(); }
+      });
+
+      // touch swipe
+      let startX = 0;
+      const carouselEl = document.getElementById('carousel');
+      carouselEl.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
+      carouselEl.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) goToSlide(currentSlide + 1);
+          else goToSlide(currentSlide - 1);
+          resetAutoplay();
+        }
+      });
+
+      updateCarousel();
+      startAutoplay();
+    }
+
+    function checkCarouselVisibility() {
+      const section = document.getElementById('resultaten');
+      if (!section) return;
+      if (failedImages >= beforeAfterImages.length && loadedImages === 0) {
+        section.style.display = 'none';
+        // stop interval
+        if (carouselInterval) clearInterval(carouselInterval);
+      }
+    }
+
+    function updateCarousel() {
+      const track = document.getElementById('track');
+      const dots = document.querySelectorAll('#dots .dot');
+      if (!track) return;
+
+      const slides = track.children.length;
+      if (currentSlide < 0) currentSlide = slides - 1;
+      if (currentSlide >= slides) currentSlide = 0;
+
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      updateCarousel();
+    }
+
+    function startAutoplay() {
+      if (carouselInterval) clearInterval(carouselInterval);
+      carouselInterval = setInterval(() => {
+        const section = document.getElementById('resultaten');
+        if (!section || section.style.display === 'none') return;
+        currentSlide++;
+        updateCarousel();
+      }, 5000);
+    }
+
+    function resetAutoplay() {
+      if (carouselInterval) clearInterval(carouselInterval);
+      startAutoplay();
+    }
+
+    // ========== PRICES / TABS ==========
+    let currentLang = 'nl';
+    let currentCategoryIndex = 0;
+
+    function renderTabs(lang) {
+      const tabsContainer = document.getElementById('price-tabs');
+      if (!tabsContainer) return;
+      tabsContainer.innerHTML = '';
+
+      const cats = lang === 'nl' ? CATEGORIES_NL : CATEGORIES_EN;
+      cats.forEach((cat, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'tab' + (idx === currentCategoryIndex ? ' active' : '');
+        btn.textContent = cat;
+        btn.onclick = () => {
+          currentCategoryIndex = idx;
+          renderMenu(lang);
+          // re-apply active
+          document.querySelectorAll('#price-tabs .tab').forEach((b, i) => b.classList.toggle('active', i === idx));
+        };
+        tabsContainer.appendChild(btn);
+      });
+    }
+
+    function renderMenu(lang) {
+      const container = document.getElementById('menu-content');
+      if (!container) return;
+
+      const cats = lang === 'nl' ? CATEGORIES_NL : CATEGORIES_EN;
+      const cat = cats[currentCategoryIndex];
+      const services = MENUS[lang][cat] || [];
+
+      container.innerHTML = '';
+
+      services.forEach(svc => {
+        const row = document.createElement('div');
+        row.className = 'service';
+
+        const left = document.createElement('div');
+        left.className = 'service-name';
+        left.innerHTML = svc.name + (svc.duration ? ` <span class="service-duration">· ${svc.duration}</span>` : '');
+
+        if (svc.signature) {
+          const badge = document.createElement('span');
+          badge.style.cssText = 'font-size:10px;background:#A65E2E;color:#fff;padding:1px 7px;border-radius:999px;margin-left:8px;vertical-align:middle;';
+          badge.textContent = 'SIGNATURE';
+          left.appendChild(badge);
+        }
+
+        const right = document.createElement('div');
+        right.className = 'service-price';
+        right.textContent = svc.price;
+
+        row.appendChild(left);
+        row.appendChild(right);
+        container.appendChild(row);
+      });
+    }
+
+    function initPrices() {
+      // Initial render: NL first category (static-ish)
+      currentCategoryIndex = 0;
+      renderTabs('nl');
+      renderMenu('nl');
+
+      // Store initial lang
+    }
+
+    // ========== I18N ==========
+    function applyI18n(lang) {
+      const dict = I18N[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          // For hero title which contains <em>, use innerHTML
+          if (key === 'hero.title' || key === 'owner.title') {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
+        }
+      });
+
+      // Update document lang
+      document.documentElement.lang = lang;
+
+      // Re-render prices with new language
+      renderTabs(lang);
+      renderMenu(lang);
+    }
+
+    function switchLang(lang) {
+      if (currentLang === lang) return;
+      currentLang = lang;
+
+      // Update pill UI
+      document.getElementById('lang-nl').classList.toggle('active', lang === 'nl');
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+
+      applyI18n(lang);
+
+      try {
+        localStorage.setItem('lianas_lang', lang);
+      } catch (e) {}
+    }
+
+    function initLang() {
+      let saved = 'nl';
+      try {
+        const fromStorage = localStorage.getItem('lianas_lang');
+        if (fromStorage === 'nl' || fromStorage === 'en') saved = fromStorage;
+      } catch (e) {}
+
+      currentLang = saved;
+
+      document.getElementById('lang-nl').classList.toggle('active', saved === 'nl');
+      document.getElementById('lang-en').classList.toggle('active', saved === 'en');
+
+      // Initial HTML is already in NL, so only switch if EN saved
+      if (saved === 'en') {
+        applyI18n('en');
+      } else {
+        // Ensure document lang is correct
+        document.documentElement.lang = 'nl';
+      }
+    }
+
+    // ========== OWNER IMAGE FALLBACK ==========
+    function initOwnerImage() {
+      const img = document.getElementById('owner-photo');
+      if (!img) return;
+      img.onerror = () => {
+        const wrap = img.parentNode;
+        const ph = document.createElement('div');
+        ph.style.cssText = 'width:100%;aspect-ratio:4/3;border-radius:18px;background:linear-gradient(145deg,#EDE4D9,#D9CBB9);display:flex;align-items:center;justify-content:center;color:#6E5E66;font-size:15px;text-align:center;';
+        ph.innerHTML = `<div><div style="font-size:42px;margin-bottom:6px;">👩‍🦰</div><strong>Shohreh</strong><br><span style="font-size:12px;opacity:.75;">Voeg foto toe: owner/owner.jpg</span></div>`;
+        wrap.replaceChild(ph, img);
+      };
+    }
+
+    // ========== INIT ==========
+    function init() {
+      // Carousel
+      buildCarousel();
+
+      // Prices
+      initPrices();
+
+      // Language
+      initLang();
+
+      // Owner photo graceful fallback
+      initOwnerImage();
+
+      // Make sure all images in carousel have been considered for hide (in case)
+      setTimeout(() => {
+        const section = document.getElementById('resultaten');
+        if (section && failedImages >= beforeAfterImages.length) {
+          section.style.display = 'none';
+        }
+      }, 1500);
+
+      // Bonus: allow pressing "b" on keyboard in dev to hide carousel manually (not needed in prod)
+      // document.addEventListener('keypress', e => { if (e.key.toLowerCase()==='b') document.getElementById('resultaten').style.display='none'; });
+    }
+
+    // Boot
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
